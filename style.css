@@ -24,6 +24,15 @@ html, body, .container {
 .sidebar {
     background-color: #1992d4;
     grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.menu {
+    display: inherit;
+    flex-direction: inherit;
+    gap: 15px;
 }
 
 .content {
