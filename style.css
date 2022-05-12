@@ -22,6 +22,18 @@ html, body {
     grid-area: header;
 }
 
+.header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+}
+
+.header > div > div {
+    display: flex;
+    gap: 15px;
+}
+
 .sidebar {
     background-color: #1992d4;
     grid-area: sidebar;
