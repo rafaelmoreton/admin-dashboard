@@ -51,4 +51,21 @@ html, body {
 .content {
     background-color: #e2e8f0;
     grid-area: content;
+    display: grid;
+    grid-template-areas:
+    "projects announcements"
+    "projects trending";
+    grid-template-columns: 2.5fr 1fr;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
