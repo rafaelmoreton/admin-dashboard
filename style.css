@@ -66,6 +66,20 @@ html, body {
     grid-area: announcements;
 }
 
+.announce-box, .trend-box {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.announce-item {
+    height: 100px;
+}
+
 .trending {
     grid-area: trending;
+}
+
+.trend-item {
+    height: 50px;
 }
