@@ -4,7 +4,7 @@ html, body {
 
 .container {
     min-height: 100%;
-    background-color: rgb(191, 255, 0);
+    background-color: #e2e8f0;
     display: grid;
     grid-template-areas:
     "sidebar header"
@@ -56,6 +56,10 @@ html, body {
     "projects announcements"
     "projects trending";
     grid-template-columns: 2.5fr 1fr;
+    gap: 15px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 30px;
 }
 
 .projects {
@@ -68,29 +72,37 @@ html, body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.project-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: start;
+    font-size: 1.5em;
+}
+
 .project-item {
     background-color: #ffffff;
-    height: 230px;
+    height: 150px;
 }
 
 .announcements {
     grid-area: announcements;
+    display: flex;
+    flex-direction: column;
 }
 
 .announce-box, .trend-box {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
-.announce-item {
-    height: 100px;
+.announce-item, .trend-item {
+    flex-grow: 1;
 }
 
 .trending {
     grid-area: trending;
-}
-
-.trend-item {
-    height: 50px;
+    display: flex;
+    flex-direction: column;
 }
