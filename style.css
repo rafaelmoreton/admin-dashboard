@@ -1,10 +1,18 @@
+:root {
+    --default-gap: 15px;
+}
+
+/* PAGE LAYOUT*/
+
 html, body {
     height: 100%;
 }
 
 .container {
     min-height: 100%;
-    background-color: #e2e8f0;
+}
+
+.container {
     display: grid;
     grid-template-areas:
     "sidebar header"
@@ -13,14 +21,19 @@ html, body {
     grid-template-rows: 1fr 4.5fr;
 }
 
-.header, .sidebar, .content {
-    text-align: center;
-}
-
 .header {
-    background-color: #ffffff;
     grid-area: header;
 }
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+/* HEADER LAYOUT */
 
 .header > div {
     display: flex;
@@ -30,35 +43,35 @@ html, body {
 }
 
 .header > div > div {
-    display: flex;
-    gap: 15px;
+    display: inherit;
+    gap: var(--default-gap);
 }
 
+/* SIDEBAR LAYOUT */
+
 .sidebar {
-    background-color: #1992d4;
-    grid-area: sidebar;
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.menu {
+.sidebar-menu {
     display: inherit;
     flex-direction: inherit;
-    gap: 15px;
+    gap: var(--default-gap);
 }
 
+/* CONTENT LAYOUT */
+
 .content {
-    background-color: #e2e8f0;
-    grid-area: content;
     display: grid;
     grid-template-areas:
     "projects announcements"
     "projects trending";
     grid-template-columns: 2.5fr 1fr;
-    gap: 15px;
+    gap: var(--default-gap);
     padding-bottom: 30px;
-    padding-left: 15px;
+    padding-left: var(--default-gap);
     padding-right: 30px;
 }
 
@@ -66,9 +79,19 @@ html, body {
     grid-area: projects;
 }
 
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+/* PROJECTS LAYOUT */
+
 .project-box {
     display: grid;
-    gap: 15px;
+    gap: var(--default-gap);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
@@ -76,22 +99,20 @@ html, body {
     margin-top: 30px;
     margin-bottom: 10px;
     text-align: start;
-    font-size: 1.5em;
 }
 
 .project-item {
-    background-color: #ffffff;
     height: 150px;
 }
 
-.announcements {
-    grid-area: announcements;
+/* ANNOUNCEMENTS AND TRENDING LAYOUT */
+
+.announcements, .trending {
     display: flex;
     flex-direction: column;
 }
 
 .announce-box, .trend-box {
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -101,8 +122,27 @@ html, body {
     flex-grow: 1;
 }
 
-.trending {
-    grid-area: trending;
-    display: flex;
-    flex-direction: column;
+/* COLORS */
+
+.header, .trend-box, .announce-box, .project-item {
+    background-color: #ffffff;
+}
+
+.sidebar {
+    background-color: #1992d4;
+}
+
+.content {
+    background-color: #e2e8f0;
+}
+
+/* FONT STYLING */
+
+.project-title {
+    font-size: 1.5em;
+}
+
+/* DUMMY STYLING */
+.header, .sidebar, .content {
+    text-align: center;
 }
