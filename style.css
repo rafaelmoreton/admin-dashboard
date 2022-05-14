@@ -35,6 +35,10 @@ html, body {
 
 /* HEADER LAYOUT */
 
+.header {
+    padding: 0 30px;
+}
+
 .header > div {
     display: flex;
     justify-content: space-between;
@@ -47,16 +51,35 @@ html, body {
     gap: var(--default-gap);
 }
 
-.greeting-pic {
-    width: 50px;
-    height: fit-content;
-    padding: 5px;
+#search-bar {
+    width: 45vw;
+    margin-right: 50px;
+}
+
+.profile {
+    align-items: center;
+}
+
+.greeting {
+    margin-right: 20px;
 }
 
 .profile-pic {
     width: 35px;
     height: fit-content;
     padding: 3px;
+}
+
+.greeting-pic {
+    width: 50px;
+    height: fit-content;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.greeting-phrase, .greeting-vocative {
+    margin: 5px;
+    text-align: start;
 }
 
 /* SIDEBAR LAYOUT */
@@ -134,13 +157,60 @@ html, body {
     flex-grow: 1;
 }
 
+/* HEADER STYLING */
+
+#search-bar {
+    border-radius: 50px;
+    border: none;
+    padding: 0 10px;
+}
+
+
+.account {
+    height: fit-content;
+    padding: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+}
+
+.greeting-pic {
+    border: 5px solid #d49c19;
+    border-radius: 50%;
+}
+
+.profile-pic {
+    border: 3px solid #d49c19;
+    border-radius: 50%;
+}
+
+.btn-notifications, .btn-picture {
+    border: none;
+    height: fit-content;
+    border-radius: 50%;
+    background-color: inherit;
+}
+
+.btn-notifications {
+    padding: 7px;
+}
+
+.btn-files {
+    border: none;
+    border-radius: 50px;
+    width: 100px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
 /* COLORS */
 
 .header, .trend-box, .announce-box, .project-item {
     background-color: #ffffff;
 }
 
-.sidebar {
+.sidebar, .btn-files {
     background-color: #1992d4;
 }
 
@@ -154,21 +224,12 @@ html, body {
     font-size: 1.5em;
 }
 
-/* HEADER STYLING */
-
-#search-bar {
-    border-radius: 50px;
-    border: none;
+.greeting-phrase, .greeting-vocative {
+    font-weight: bold;
 }
 
-.greeting-pic {
-    border: 5px solid #d49c19;
-    border-radius: 50%;
-}
-
-.profile-pic {
-    border: 3px solid #d49c19;
-    border-radius: 50%;
+.greeting-vocative {
+    font-size: clamp(1rem, 2vw, 1.57rem);
 }
 
 /* DUMMY STYLING */
