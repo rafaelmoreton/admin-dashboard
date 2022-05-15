@@ -91,12 +91,34 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    padding: 30px;
 }
 
 .sidebar-menu {
     display: inherit;
     flex-direction: inherit;
     gap: var(--default-gap);
+}
+
+.sidebar-logo {
+    margin-left: -15px;
+}
+
+.sidebar-item {
+    height: 36px;
+}
+
+.sidebar-item, .sidebar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-logo > img {
+    margin-right: 10px;
+}
+
+.sidebar-item > img {
+    margin-right: 20px;
 }
 
 /* CONTENT LAYOUT */
@@ -208,6 +230,22 @@ html, body {
     padding: 10px 0;
 }
 
+/* SIDEBAR STYLING */
+
+.sidebar {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.sidebar-logo {
+    font-size: 1.5em;
+}
+
+.sidebar-item {
+    font-size: 1.1em;
+}
+
+
 /* COLORS */
 
 .header, .trend-box, .announce-box, .project-item {
@@ -237,6 +275,6 @@ html, body {
 }
 
 /* DUMMY STYLING */
-.header, .sidebar, .content {
+.content {
     text-align: center;
 }
