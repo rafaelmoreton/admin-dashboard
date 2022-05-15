@@ -130,7 +130,8 @@ html, body {
 .project-box {
     display: grid;
     gap: var(--default-gap);
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 0.7fr));
+    justify-content: center;
 }
 
 .project-title {
@@ -140,7 +141,7 @@ html, body {
 }
 
 .project-item {
-    height: 150px;
+    height: max(20vh, 150px);
 }
 
 /* ANNOUNCEMENTS AND TRENDING LAYOUT */
