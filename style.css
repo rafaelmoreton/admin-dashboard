@@ -129,9 +129,9 @@ html, body {
     "projects announcements"
     "projects trending";
     grid-template-columns: 2.5fr 1fr;
-    gap: var(--default-gap);
+    gap: calc(var(--default-gap) * 2);
     padding-bottom: 30px;
-    padding-left: var(--default-gap);
+    padding-left: 30px;
     padding-right: 30px;
 }
 
@@ -151,19 +151,48 @@ html, body {
 
 .project-box {
     display: grid;
-    gap: var(--default-gap);
+    gap: calc(var(--default-gap) * 2);
     grid-template-columns: repeat(auto-fit, minmax(350px, 0.7fr));
     justify-content: center;
 }
 
-.project-title {
+.content-title {
     margin-top: 30px;
     margin-bottom: 10px;
     text-align: start;
 }
 
 .project-item {
-    height: max(20vh, 150px);
+    height: max(25vh, 11em);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    padding-left: 30px;
+}
+
+.project-title {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.project-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.project-controls {
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    gap: 30px;
 }
 
 /* ANNOUNCEMENTS AND TRENDING LAYOUT */
@@ -272,7 +301,7 @@ html, body {
 
 /* CONTENT STYLING */
 
-.project-title {
+.content-title {
     font-size: 1.5em;
 }
 
@@ -298,8 +327,21 @@ html, body {
     overflow: hidden;
 }
 
-.trend-project {
+.trend-project, .project-text {
     color: #636363;
+}
+
+.project-text {
+    font-size: 1.15em;
+}
+
+.project-item {
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgba(240,180,42,1) 2%, rgba(255,255,255,1) 2%);
+}
+
+.project-title {
+    font-size: 1.3em;
 }
 
 /* COLORS */
