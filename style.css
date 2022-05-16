@@ -21,7 +21,6 @@ html, body {
     "sidebar header"
     "sidebar content";
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 150px;
 }
 
 .header {
@@ -39,7 +38,8 @@ html, body {
 /* HEADER LAYOUT */
 
 .header {
-    padding: 0 30px;
+    padding: 10px 30px;
+    z-index: 1;
 }
 
 .header > div {
@@ -235,6 +235,12 @@ html, body {
 
 .trend-text p {
     margin: 0;
+}
+
+/* PAGE STYLING */
+
+.header, .project-item, .trend-box, .announce-box {
+    box-shadow: 1px 2px 5px #8a8a8a;
 }
 
 /* HEADER STYLING */
