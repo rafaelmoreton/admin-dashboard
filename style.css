@@ -173,14 +173,39 @@ html, body {
     flex-direction: column;
 }
 
+.announce-box {
+    padding: 30px 45px;
+}
+
+.trend-box {
+    padding: 30px;
+    gap: 25px;
+}
+
 .announce-box, .trend-box {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+}
+
+.announce-title {
+    margin-bottom: 5px;
 }
 
 .announce-item, .trend-item {
     flex-grow: 1;
+}
+
+.trend-item {
+    display: flex;
+    align-items: center;
+}
+
+.trend-item > .profile-pic {
+    margin-right: 15px;
+}
+
+.trend-text p {
+    margin: 0;
 }
 
 /* HEADER STYLING */
@@ -253,11 +278,9 @@ html, body {
 
 .announce-title {
     font-size: 1.2em;
-    margin-bottom: 5px;
 }
 
-.announce-box {
-    padding: 30px 45px;
+.announce-box, .trend-box {
     border-radius: 15px;
 }
 
@@ -273,6 +296,10 @@ html, body {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
     overflow: hidden;
+}
+
+.trend-project {
+    color: #636363;
 }
 
 /* COLORS */
