@@ -126,8 +126,7 @@ html, body {
 .content {
     display: grid;
     grid-template-areas:
-    "projects announcements"
-    "projects trending";
+    "projects announce-trend";
     grid-template-columns: 2.5fr 1fr;
     gap: calc(var(--default-gap) * 2);
     padding-bottom: 30px;
@@ -139,12 +138,8 @@ html, body {
     grid-area: projects;
 }
 
-.announcements {
-    grid-area: announcements;
-}
-
-.trending {
-    grid-area: trending;
+.announce-trend {
+    grid-area: announce-trend;
 }
 
 /* PROJECTS LAYOUT */
