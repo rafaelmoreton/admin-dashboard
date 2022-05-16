@@ -245,6 +245,35 @@ html, body {
     font-size: 1.1em;
 }
 
+/* CONTENT STYLING */
+
+.project-title {
+    font-size: 1.5em;
+}
+
+.announce-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.announce-box {
+    padding: 30px 45px;
+    border-radius: 15px;
+}
+
+.announce-box > div:nth-child(even) {
+    border-top: 2px solid #63636359;
+    border-bottom: 2px solid #63636359;
+}
+
+.announce-paragraph {
+    color: #636363;
+    margin-top: 0px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
 
 /* COLORS */
 
@@ -262,10 +291,6 @@ html, body {
 
 /* FONT STYLING */
 
-.project-title {
-    font-size: 1.5em;
-}
-
 .greeting-phrase, .greeting-vocative {
     font-weight: bold;
 }
@@ -275,6 +300,3 @@ html, body {
 }
 
 /* DUMMY STYLING */
-.content {
-    text-align: center;
-}
